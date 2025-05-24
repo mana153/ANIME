@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head_extra %}
+    {% endblock %}
+    <title>{% block title %}AnimeSane{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">AnimeSane</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="#">Adults</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Trend</a></li>
+            <li><a href="#">My List</a></li>
+            <div class="right-header">
+                <div class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <form action="/search" method="post" class="d-flex flex-column align-items-center">
+                        <div class="mb-3 w-50">
+                            <input type="text" name="query" class="form-control"
+                                placeholder="Enter anime name (e.g., One Piece)" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </ul>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts_extra %}
+    {% endblock %}
+</body>
+
+</html>

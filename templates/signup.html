@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - AnimeSane</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <a href="/" class="logo">AnimeSane</a>
+
+  <div class="signup-box">
+    <div class="signup-header center-align">
+      <h5><i class="fa fa-user-plus"></i> Sign Up</h5>
+    </div>
+
+    <form action="{{ url_for('signup') }}" method="POST">
+      <div class="input-field">
+        <input id="name" name="name" type="text" required placeholder=" " autocomplete="name">
+        <label for="name">Name</label>
+      </div>
+      <div class="input-field">
+        <input id="username" name="username" type="text" required placeholder=" " autocomplete="username">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field">
+        <input id="email" name="email" type="email" required placeholder=" " autocomplete="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <input id="password" name="password" type="password" required placeholder=" " autocomplete="new-password">
+        <label for="password">Password</label>
+      </div>
+
+      <div class="center-align">
+        <button class="anime-button" type="submit">
+          <i class="fa fa-user-plus"></i> Create Account
+        </button>
+      </div>
+
+      <div class="auth-links">
+        <a href="{{ url_for('login') }}">Already have an account? Login</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

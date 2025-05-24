@@ -1,0 +1,160 @@
+:root {
+  --primary: #ff3700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("../images/movies/background_main.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.login-box {
+  background-color: rgba(30, 30, 30, 0.75);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.login-header h5 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color: #fff;
+  padding: 10px 5px;
+  font-size: 1rem;
+}
+
+.input-field label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 1rem;
+  color: #bbb;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+.input-field input:focus {
+  outline: none;
+  border-bottom: 2px solid tran;
+}
+
+.anime-button {
+  background: linear-gradient(45deg, hsl(354, 95%, 41%), #f96d09);
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease, transform 0.2s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.anime-button:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 25px #00ccff;
+}
+
+.anime-button:focus {
+  outline: 3px solid #00ccff;
+  outline-offset: 3px;
+}
+
+.auth-links {
+  margin-top: 20px;
+  text-align: center;
+}
+.input-field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent !important;
+  color: #fff;
+  
+  padding: 10px 5px;
+  font-size: 1rem;
+}
+
+.input-field input::placeholder {
+  color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(30, 30, 30, 0.7) inset !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.auth-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.auth-links a:hover {
+  color: var(--primary);
+}
+
+.flash-message {
+  background: rgba(255, 50, 50, 0.85);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}

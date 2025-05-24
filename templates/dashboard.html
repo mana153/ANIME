@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - AnimeSane{% endblock %}
+
+{% block content %}
+<div class="banner">
+    <div class="content">
+        <img src="{{ url_for('static', filename='images/movies/title.png') }}" alt="" class="movie-title">
+
+        <h4>
+            <span>2012</span><span><i>3+</i></span><span>17+ Seasons</span><span>Action, Adventure</span>
+        </h4>
+        <p>
+            Bleach is a popular anime series that follows Ichigo Kurosaki, a teenager who gains the powers of a Soul Reaper and battles evil spirits known as Hollows.
+            Filled with action, supernatural elements, and intense battles, it explores the balance between life and the afterlife.
+        </p>
+        <div class="button">
+            <a href="http://www.youtube.com/watch?v=78WIYzX_m98" target="_blank"><i class="fa fa-play" aria-hidden="true"></i>Watch Trailer</a>
+            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            {% if 'user_id' not in session %}
+            <a href="{{ url_for('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+            <a href="{{ url_for('signup') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+            {% else %}
+            <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="carousel-box">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/movies/hunter.jpeg') }}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/movies/onepiece.jpeg') }}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/movies/black_clover.jpeg') }}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/movies/demon.jpeg') }}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/movies/bleach.jpeg') }}" alt="">
+            </div>
+        </div>
+        <a href="http://www.youtube.com/watch?v=78WIYzX_m98" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Watch Trailer</a>
+
+        <ul class="sci">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i>Youtube</a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+</script>
+{% endblock %}

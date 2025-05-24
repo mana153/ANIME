@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results for "{{ query }}"</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/result.css"></head>
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4">Results for "{{ query }}"</h1>
+
+    {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for anime in results %}
+        <div class="col">
+          <div class="card h-100">
+            {% if anime.images and anime.images.jpg and anime.images.jpg.image_url %}
+              <img src="{{ anime.images.jpg.image_url }}" class="card-img-top" alt="{{ anime.title }}">
+            {% else %}
+              <img src="https://via.placeholder.com/300x400?text=No+Image" class="card-img-top" alt="No image">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ anime.title }}</h5>
+              <p class="card-text">
+                {{ anime.synopsis[:200] if anime.synopsis else "No synopsis available." }}...
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="{{ anime.url }}" target="_blank" class="btn btn-primary btn-sm">View on MAL</a>
+              {% if anime.trailer and anime.trailer.url %}
+                <a href="{{ anime.trailer.url }}" target="_blank" class="btn btn-secondary btn-sm">Watch Trailer</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-4">
+      <a href="/" class="btn btn-outline-secondary">Back to Home</a>
+    </div>
+  </div>
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

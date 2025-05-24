@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="#" href="login.html">Login</a>
+    <link rel="#" href="signup.html">Sign Up</a>
+
+    <title>MOVIESSS</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">AnimeSane</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="#">Adults</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Trend</a></li>
+            <li><a href="#">My List</a></li>
+
+            <div class="right-header">
+                <div class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search..." id="search-input">
+                </div>
+            </div>
+
+        </ul>
+
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <img src="images/movies/title.png" alt="" class="movie-title">
+
+            <h4>
+                <span>2012</span><span><i>3+</i></span><span>17+ Seasons</span><span>Action, Adventure</span>
+            </h4>
+            <p>
+                Bleach is a popular anime series that follows Ichigo Kurosaki, a teenager who gains the powers of a Soul
+                Reaper and battles evil spirits known as Hollows.
+                Filled with action, supernatural elements, and intense battles, it explores the balance between life and
+                the afterlife.
+            </p>
+            <div class="button">
+                <a href="http://www.youtube.com/watch?v=78WIYzX_m98" target="_blank"><i class="fa fa-play"
+                        aria-hidden="true"></i>Watch Trailer</a> <a href="#"><i class="fa fa-plus"
+                        aria-hidden="true"></i>My List</a>
+                <a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                <a href="signup.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="./images/movies/hunter.jpeg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movies/onepiece.jpeg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movies/black_clover.jpeg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movies/demon.jpeg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/movies/bleach.jpeg" alt="">
+                </div>
+            </div>
+            <a href="#"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Watch Trailer</a>
+
+            <ul class="sci">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i>Youtube</a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+
+</html>
